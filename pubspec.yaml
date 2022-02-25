@@ -19,6 +19,14 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+dependency_overrides:
+  firebase_messaging_platform_interface: 3.1.6
+  firebase_crashlytics_platform_interface: 3.1.13
+  cloud_firestore_platform_interface: 5.4.13
+  firebase_auth_platform_interface: 6.1.11
+  firebase_storage_platform_interface: 4.0.14
+  cloud_functions_platform_interface: 5.0.21
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
