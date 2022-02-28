@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.login">
+    package="com.exaple.users">
    <application
         android:label="login"
         android:name="${applicationName}"
