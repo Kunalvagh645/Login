@@ -1,28 +1,24 @@
-import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter/foundation.dart';
-
 class Model {
   String? id;
-  String? fName;
-  String? lName;
-  String? age;
+  int? age;
+  String? firstName;
+  String? lastName;
 
-  Model({
-    required this.id,
-    required this.fName,
-    required this.lName,
-    required this.age,
-  }
-  );
+  Model({this.id, this.age, this.firstName, this.lastName});
 
-  factory Model.fromJson(Map<String, dynamic> data){
-      return Model(
-          id: data['id'],
-          fName: data['first_name'],
-          lName: data['last_name'],
-          age: data['age'],
-      );
+  Model.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    age = json['age'];
+    firstName = json['first_name'];
+    lastName = json['last_name'];
   }
 
-
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['age'] = this.age;
+    data['first_name'] = this.firstName;
+    data['last_name'] = this.lastName;
+    return data;
   }
+}
